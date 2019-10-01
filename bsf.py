@@ -376,5 +376,6 @@ if __name__ == "__main__":
     solution_depth = solution[1].depth
     with codecs.open("solution_presentation.html", "w", "utf-8") as file:
         file.write((SOLUTION_TEMPLATE % (MINIFIED_CSS, search_time, solution_depth, jsonfy(solution), MINIFIED_JS)))
+        print ("Tempo para encontrar a solução: %.2fms, %d a níveis de profundidade." % (search_time, solution_depth))
         print ("Solução gerada no arquivo: " + os.path.abspath(file.name).replace("\\", "/"))
 
